@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!-- mysql的jar文件路径 -->
+	<classPathEntry
+		location="D:\files\apache-maven-3.3.9-bin\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar" />
+	<context id="Mysql" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<!-- 数据库相关配置 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://linzesi.top:3306/sjfx?" userId="sjfx"
+			password="sjfx" />
+
+		<!-- 配置pojo目录 -->
+		<javaModelGenerator targetPackage="com.epas.pojo"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+
+		<!-- 配置xml映射目录 -->
+		<sqlMapGenerator targetPackage="mybatis.mapper"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- 配置dao目录 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.epas.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- tableName是数据库中的表名，domainObjectName是生成的JAVA模型名，后面的参数不用改，要生成更多的表就在下面继续加table标签 -->
+		<table tableName="tb_user" domainObjectName="User"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_order_shipping" domainObjectName="OrderShipping"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_order_item" domainObjectName="OrderItem"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_order" domainObjectName="Order"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_item_param_item" domainObjectName="ItemParamItem"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_item_param" domainObjectName="ItemParam"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_item_desc" domainObjectName="ItemDesc"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_item_cat" domainObjectName="ItemCat"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_item" domainObjectName="Item"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_content_category" domainObjectName="ContentCategory"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+		<table tableName="tb_content" domainObjectName="Content"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<property name="mapUnderscoreToCamelCase" value="true" />
+		</table>
+
+	</context>
+</generatorConfiguration>
